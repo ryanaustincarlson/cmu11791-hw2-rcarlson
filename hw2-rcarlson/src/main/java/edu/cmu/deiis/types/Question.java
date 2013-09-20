@@ -9,9 +9,12 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 
+import org.apache.uima.jcas.cas.FSArray;
+
+
 /** 
- * Updated by JCasGen Wed Sep 11 13:44:28 EDT 2013
- * XML source: /home/diwang/ur-workspace/deiis-f13-homework/src/main/resources/desc/deiis_types.xml
+ * Updated by JCasGen Fri Sep 20 15:53:06 EDT 2013
+ * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw2-rcarlson/hw2-rcarlson/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated
@@ -59,6 +62,38 @@ public class Question extends Annotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: ngrams
+
+  /** getter for ngrams - gets 
+   * @generated */
+  public FSArray getNgrams() {
+    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_ngrams == null)
+      jcasType.jcas.throwFeatMissing("ngrams", "edu.cmu.deiis.types.Question");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams)));}
+    
+  /** setter for ngrams - sets  
+   * @generated */
+  public void setNgrams(FSArray v) {
+    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_ngrams == null)
+      jcasType.jcas.throwFeatMissing("ngrams", "edu.cmu.deiis.types.Question");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for ngrams - gets an indexed value - 
+   * @generated */
+  public NGram getNgrams(int i) {
+    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_ngrams == null)
+      jcasType.jcas.throwFeatMissing("ngrams", "edu.cmu.deiis.types.Question");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams), i);
+    return (NGram)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams), i)));}
+
+  /** indexed setter for ngrams - sets an indexed value - 
+   * @generated */
+  public void setNgrams(int i, NGram v) { 
+    if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_ngrams == null)
+      jcasType.jcas.throwFeatMissing("ngrams", "edu.cmu.deiis.types.Question");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams), i, jcasType.ll_cas.ll_getFSRef(v));}
+  }
 
     
