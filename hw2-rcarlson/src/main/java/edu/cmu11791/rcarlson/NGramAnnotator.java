@@ -90,6 +90,7 @@ public class NGramAnnotator extends JCasAnnotator_ImplBase {
       Token nextToken = tokens[tokenIndex+n-1];
       
       Token ngramToken = new Token(jcas);
+      ngramToken.setConfidence(1);
       ngramToken.setBegin(token.getBegin());
       ngramToken.setEnd(nextToken.getEnd());
       ngramTokens[tokenIndex] = ngramToken;

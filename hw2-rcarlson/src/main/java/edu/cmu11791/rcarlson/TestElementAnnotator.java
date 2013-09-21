@@ -22,6 +22,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
     Matcher matcher = questionPattern.matcher(docText);
     while (matcher.find()) {
       Question question = new Question(jcas);
+      question.setConfidence(1);
       question.setBegin(matcher.start()+2); // ignore the "Q "
       question.setEnd(matcher.end());
       question.addToIndexes();
@@ -30,6 +31,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
     matcher.usePattern(answerPattern);
     while (matcher.find()) {
       Answer answer = new Answer(jcas);
+      answer.setConfidence(1);
       answer.setBegin(matcher.start() + 4);
       answer.setEnd(matcher.end());
       answer.setIsCorrect(matcher.group(1).equals("1"));
