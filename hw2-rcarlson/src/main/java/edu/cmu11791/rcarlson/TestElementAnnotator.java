@@ -10,10 +10,16 @@ import org.apache.uima.jcas.JCas;
 import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.Question;
 
+/**
+ * Parse the document using regular expressions into a Question and multiple Answers.
+ * 
+ * @author Ryan Carlson (rcarlson)
+ */
 public class TestElementAnnotator extends JCasAnnotator_ImplBase {
-  
+
   private Pattern questionPattern = Pattern.compile("Q .+\\?");
-  private Pattern answerPattern  = Pattern.compile("A (0|1) .+\\.");
+
+  private Pattern answerPattern = Pattern.compile("A (0|1) .+\\.");
 
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException {
@@ -28,7 +34,7 @@ public class TestElementAnnotator extends JCasAnnotator_ImplBase {
       question.setCasProcessorId(TestElementAnnotator.class.getSimpleName());
       question.addToIndexes();
     }
-    
+
     matcher.usePattern(answerPattern);
     while (matcher.find()) {
       Answer answer = new Answer(jcas);

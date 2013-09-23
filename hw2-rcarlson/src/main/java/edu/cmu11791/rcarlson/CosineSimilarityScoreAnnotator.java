@@ -15,6 +15,11 @@ import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.NGram;
 import edu.cmu.deiis.types.Question;
 
+/**
+ * Calculates the Cosine Similarity between a question and every potential answer.
+ * 
+ * @author Ryan Carlson (rcarlson)
+ */
 public class CosineSimilarityScoreAnnotator extends JCasAnnotator_ImplBase {
 
   @Override

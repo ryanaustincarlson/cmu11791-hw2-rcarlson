@@ -11,12 +11,17 @@ import edu.cmu.deiis.types.Answer;
 import edu.cmu.deiis.types.AnswerScore;
 import edu.cmu.deiis.types.Question;
 
+/**
+ * A useful abstraction if a score annotator only needs to know about the (question, answer) pair.
+ * 
+ * @author Ryan Carlson (rcarlson)
+ */
 public abstract class AbstractScoreAnnotator extends JCasAnnotator_ImplBase {
 
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException {
     Question question = getQuestion(jcas);
-    
+
     Iterator<Annotation> answerIter = jcas.getAnnotationIndex(Answer.type).iterator();
     while (answerIter.hasNext()) {
       Answer answer = (Answer) answerIter.next();
@@ -24,9 +29,9 @@ public abstract class AbstractScoreAnnotator extends JCasAnnotator_ImplBase {
       answerScore.setAnswer(answer);
       answerScore.setBegin(answer.getBegin());
       answerScore.setEnd(answer.getEnd());
-      
+
       assignScore(jcas, question, answerScore);
-      
+
       answerScore.addToIndexes();
     }
   }
@@ -40,7 +45,7 @@ public abstract class AbstractScoreAnnotator extends JCasAnnotator_ImplBase {
     }
     return question;
   }
-  
+
   protected abstract void assignScore(JCas jcas, Question question, AnswerScore answerScore);
-  
+
 }
