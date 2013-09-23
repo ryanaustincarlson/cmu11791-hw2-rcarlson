@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Fri Sep 20 19:10:30 EDT 2013 */
-package edu.cmu.deeis.types;
+/* First created by JCasGen Mon Sep 23 17:46:06 EDT 2013 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Fri Sep 20 19:10:30 EDT 2013
+ * Updated by JCasGen Mon Sep 23 17:46:06 EDT 2013
  * @generated */
 public class Evaluation_Type extends Annotation_Type {
   /** @generated */
@@ -42,7 +42,7 @@ public class Evaluation_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deeis.types.Evaluation");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.Evaluation");
  
   /** @generated */
   final Feature casFeat_precisionAtN;
@@ -51,13 +51,13 @@ public class Evaluation_Type extends Annotation_Type {
   /** @generated */ 
   public double getPrecisionAtN(int addr) {
         if (featOkTst && casFeat_precisionAtN == null)
-      jcas.throwFeatMissing("precisionAtN", "edu.cmu.deeis.types.Evaluation");
+      jcas.throwFeatMissing("precisionAtN", "edu.cmu.deiis.types.Evaluation");
     return ll_cas.ll_getDoubleValue(addr, casFeatCode_precisionAtN);
   }
   /** @generated */    
   public void setPrecisionAtN(int addr, double v) {
         if (featOkTst && casFeat_precisionAtN == null)
-      jcas.throwFeatMissing("precisionAtN", "edu.cmu.deeis.types.Evaluation");
+      jcas.throwFeatMissing("precisionAtN", "edu.cmu.deiis.types.Evaluation");
     ll_cas.ll_setDoubleValue(addr, casFeatCode_precisionAtN, v);}
     
   
@@ -69,19 +69,19 @@ public class Evaluation_Type extends Annotation_Type {
   /** @generated */ 
   public int getAnswers(int addr) {
         if (featOkTst && casFeat_answers == null)
-      jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     return ll_cas.ll_getRefValue(addr, casFeatCode_answers);
   }
   /** @generated */    
   public void setAnswers(int addr, int v) {
         if (featOkTst && casFeat_answers == null)
-      jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     ll_cas.ll_setRefValue(addr, casFeatCode_answers, v);}
     
    /** @generated */
   public int getAnswers(int addr, int i) {
         if (featOkTst && casFeat_answers == null)
-      jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i);
@@ -91,7 +91,7 @@ public class Evaluation_Type extends Annotation_Type {
   /** @generated */ 
   public void setAnswers(int addr, int i, int v) {
         if (featOkTst && casFeat_answers == null)
-      jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     if (lowLevelTypeChecks)
       ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i, v, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i);

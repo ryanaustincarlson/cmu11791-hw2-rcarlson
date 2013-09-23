@@ -12,7 +12,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
-import edu.cmu.deeis.types.Evaluation;
+import edu.cmu.deiis.types.Evaluation;
 import edu.cmu.deiis.types.AnswerScore;
 
 /**

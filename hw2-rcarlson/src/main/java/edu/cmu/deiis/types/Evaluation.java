@@ -1,7 +1,7 @@
 
 
-/* First created by JCasGen Fri Sep 20 19:10:30 EDT 2013 */
-package edu.cmu.deeis.types;
+/* First created by JCasGen Mon Sep 23 17:46:06 EDT 2013 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -9,11 +9,10 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
-import edu.cmu.deiis.types.AnswerScore;
 
 
 /** 
- * Updated by JCasGen Fri Sep 20 19:10:30 EDT 2013
+ * Updated by JCasGen Mon Sep 23 17:46:06 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw2-rcarlson/hw2-rcarlson/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Evaluation extends Annotation {
@@ -71,14 +70,14 @@ public class Evaluation extends Annotation {
    * @generated */
   public double getPrecisionAtN() {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_precisionAtN == null)
-      jcasType.jcas.throwFeatMissing("precisionAtN", "edu.cmu.deeis.types.Evaluation");
+      jcasType.jcas.throwFeatMissing("precisionAtN", "edu.cmu.deiis.types.Evaluation");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((Evaluation_Type)jcasType).casFeatCode_precisionAtN);}
     
   /** setter for precisionAtN - sets  
    * @generated */
   public void setPrecisionAtN(double v) {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_precisionAtN == null)
-      jcasType.jcas.throwFeatMissing("precisionAtN", "edu.cmu.deeis.types.Evaluation");
+      jcasType.jcas.throwFeatMissing("precisionAtN", "edu.cmu.deiis.types.Evaluation");
     jcasType.ll_cas.ll_setDoubleValue(addr, ((Evaluation_Type)jcasType).casFeatCode_precisionAtN, v);}    
    
     
@@ -89,21 +88,21 @@ public class Evaluation extends Annotation {
    * @generated */
   public FSArray getAnswers() {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_answers == null)
-      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_answers)));}
     
   /** setter for answers - sets  
    * @generated */
   public void setAnswers(FSArray v) {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_answers == null)
-      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     jcasType.ll_cas.ll_setRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_answers, jcasType.ll_cas.ll_getFSRef(v));}    
     
   /** indexed getter for answers - gets an indexed value - 
    * @generated */
   public AnswerScore getAnswers(int i) {
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_answers == null)
-      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_answers), i);
     return (AnswerScore)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_answers), i)));}
 
@@ -111,7 +110,7 @@ public class Evaluation extends Annotation {
    * @generated */
   public void setAnswers(int i, AnswerScore v) { 
     if (Evaluation_Type.featOkTst && ((Evaluation_Type)jcasType).casFeat_answers == null)
-      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deeis.types.Evaluation");
+      jcasType.jcas.throwFeatMissing("answers", "edu.cmu.deiis.types.Evaluation");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_answers), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Evaluation_Type)jcasType).casFeatCode_answers), i, jcasType.ll_cas.ll_getFSRef(v));}
   }

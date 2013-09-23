@@ -21,7 +21,7 @@
       <capability>
         <inputs/>
         <outputs>
-          <type allAnnotatorFeatures="true">edu.cmu.deeis.types.Evaluation</type>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Evaluation</type>
         </outputs>
         <languagesSupported/>
       </capability>

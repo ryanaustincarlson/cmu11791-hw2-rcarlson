@@ -97,7 +97,7 @@
       </features>
     </typeDescription>
   <typeDescription>
-      <name>edu.cmu.deeis.types.Evaluation</name>
+      <name>edu.cmu.deiis.types.Evaluation</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>

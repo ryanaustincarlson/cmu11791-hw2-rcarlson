@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Fri Sep 20 19:10:29 EDT 2013
+ * Updated by JCasGen Mon Sep 23 17:46:06 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw2-rcarlson/hw2-rcarlson/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
