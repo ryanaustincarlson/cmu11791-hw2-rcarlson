@@ -13,7 +13,7 @@ import org.apache.uima.jcas.cas.FSArray;
 
 
 /** 
- * Updated by JCasGen Mon Sep 23 17:46:06 EDT 2013
+ * Updated by JCasGen Mon Sep 23 18:12:59 EDT 2013
  * XML source: /Users/rcarlson/local/eclipse-workspaces/software-engineering/cmu11791-hw2-rcarlson/hw2-rcarlson/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Question extends Annotation {
@@ -65,14 +65,14 @@ public class Question extends Annotation {
   //*--------------*
   //* Feature: ngrams
 
-  /** getter for ngrams - gets 
+  /** getter for ngrams - gets Each question has a list of 1-, 2-, and 3-grams (possibly more or less).
    * @generated */
   public FSArray getNgrams() {
     if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_ngrams == null)
       jcasType.jcas.throwFeatMissing("ngrams", "edu.cmu.deiis.types.Question");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Question_Type)jcasType).casFeatCode_ngrams)));}
     
-  /** setter for ngrams - sets  
+  /** setter for ngrams - sets Each question has a list of 1-, 2-, and 3-grams (possibly more or less). 
    * @generated */
   public void setNgrams(FSArray v) {
     if (Question_Type.featOkTst && ((Question_Type)jcasType).casFeat_ngrams == null)

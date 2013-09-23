@@ -13,8 +13,8 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Mon Sep 23 17:46:06 EDT 2013
+/** Represents an evaluation of all answers, calculating the Precision@N value and displaying the sorted answers.
+ * Updated by JCasGen Mon Sep 23 18:12:59 EDT 2013
  * @generated */
 public class Evaluation_Type extends Annotation_Type {
   /** @generated */
@@ -85,7 +85,7 @@ public class Evaluation_Type extends Annotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_answers), i);
   }
    
   /** @generated */ 

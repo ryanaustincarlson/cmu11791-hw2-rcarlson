@@ -58,7 +58,7 @@
         </featureDescription>
       <featureDescription>
           <name>ngrams</name>
-          <description/>
+          <description>Each answer has a list of 1-, 2-, and 3-grams (possibly more or less).</description>
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
           <elementType>edu.cmu.deiis.types.NGram</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
@@ -72,7 +72,7 @@
     <features>
         <featureDescription>
           <name>ngrams</name>
-          <description/>
+          <description>Each question has a list of 1-, 2-, and 3-grams (possibly more or less).</description>
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
           <elementType>edu.cmu.deiis.types.NGram</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
@@ -98,17 +98,17 @@
     </typeDescription>
   <typeDescription>
       <name>edu.cmu.deiis.types.Evaluation</name>
-      <description/>
+      <description>Represents an evaluation of all answers, calculating the Precision@N value and displaying the sorted answers.</description>
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>precisionAtN</name>
-          <description/>
+          <description>Precision@N, where N is the number of correct answers.</description>
           <rangeTypeName>uima.cas.Double</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>answers</name>
-          <description/>
+          <description>a sorted list of answer scores, from which we can calculate the Precision@N.</description>
           <rangeTypeName>uima.cas.FSArray</rangeTypeName>
           <elementType>edu.cmu.deiis.types.AnswerScore</elementType>
           <multipleReferencesAllowed>false</multipleReferencesAllowed>
