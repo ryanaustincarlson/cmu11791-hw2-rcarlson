@@ -15,7 +15,18 @@ import org.apache.uima.jcas.tcas.Annotation;
 import edu.cmu.deeis.types.Evaluation;
 import edu.cmu.deiis.types.AnswerScore;
 
+/**
+ * Sort {@link AnswerScore} objects by score, then calculate precision at *n*, where *n* is the true
+ * number of correct answers.
+ * 
+ * @author Ryan Carlson (rcarlson)
+ */
 public class EvaluationAnnotator extends JCasAnnotator_ImplBase {
+
+  private boolean shouldConsiderAnswerScore(AnswerScore answerScore) {
+    return answerScore.getCasProcessorId().equals(
+            CosineSimilarityScoreAnnotator.class.getSimpleName());
+  }
 
   @Override
   public void process(JCas jcas) throws AnalysisEngineProcessException {
@@ -46,6 +57,10 @@ public class EvaluationAnnotator extends JCasAnnotator_ImplBase {
     int numCorrectAnswers = 0;
     while (answerScoreIter.hasNext()) {
       AnswerScore answerScore = (AnswerScore) answerScoreIter.next();
+      if (!shouldConsiderAnswerScore(answerScore)) {
+        continue;
+      }
+      
       answerScores.add(answerScore);
       numCorrectAnswers += answerScore.getAnswer().getIsCorrect() ? 1 : 0;
     }

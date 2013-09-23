@@ -16,7 +16,13 @@
     <delegateAnalysisEngine key="EvaluationAnnotator">
       <import name="analysis_engines.EvaluationAnnotator"/>
     </delegateAnalysisEngine>
-  </delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenOverlapScoreAnnotator">
+      <import name="analysis_engines.TokenOverlapScoreAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CosineSimilarityScoreAnnotator">
+      <import name="analysis_engines.CosineSimilarityScoreAnnotator"/>
+    </delegateAnalysisEngine>
+    </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>hw2-rcarlson-aae</name>
     <description/>
@@ -29,6 +35,8 @@
         <node>TestElementAnnotator</node>
         <node>NGramAnnotator</node>
       <node>GoldStandardScoreAnnotator</node>
+        <node>TokenOverlapScoreAnnotator</node>
+        <node>CosineSimilarityScoreAnnotator</node>
         <node>EvaluationAnnotator</node>
       </fixedFlow>
     </flowConstraints>
