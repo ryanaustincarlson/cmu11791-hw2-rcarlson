@@ -12,8 +12,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
-import edu.cmu.deiis.types.Evaluation;
 import edu.cmu.deiis.types.AnswerScore;
+import edu.cmu.deiis.types.Evaluation;
 
 /**
  * Sort {@link AnswerScore} objects by score, then calculate precision at *n*, where *n* is the true
@@ -24,8 +24,10 @@ import edu.cmu.deiis.types.AnswerScore;
 public class EvaluationAnnotator extends JCasAnnotator_ImplBase {
 
   private boolean shouldConsiderAnswerScore(AnswerScore answerScore) {
-    return answerScore.getCasProcessorId().equals(
-            CosineSimilarityScoreAnnotator.class.getSimpleName());
+    if (answerScore.getCasProcessorId() == null) {
+      return false;
+    }
+    return answerScore.getCasProcessorId().equals("CollapseAnswerScoreAnnotator");
   }
 
   @Override
